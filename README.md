@@ -1,2 +1,1395 @@
 # my-new-website
 High Tech Auto Car Service
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="High Tech Auto Car Service - Professional automotive diagnostics, auto electrical, ECU programming, ADAS, sensors and mechanical service in Yangon, Myanmar.">
+<meta name="theme-color" content="#101315">
+<title>High Tech Auto Car Service | Diagnostic & Automotive Technology</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCQX7TFJR5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VCQX7TFJR5');
+</script>
+
+<style>
+:root{
+    --bg:#061a26;
+    --panel:#082331;
+    --panel-2:#0b2b3d;
+    --panel-3:#10394f;
+    --line:#1d536d;
+    --text:#f5fcff;
+    --muted:#a9c8d6;
+    --accent:#00a8ff;
+    --accent-2:#53c7ff;
+    --gold:#78dcff;
+    --blue:#1ab8ff;
+    --shadow:0 18px 45px rgba(0,0,0,.35);
+    --radius:2px;
+    --max:1240px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at 15% 5%,rgba(255,255,255,.035),transparent 28%),
+        radial-gradient(circle at 85% 20%,rgba(0,168,255,.09),transparent 32%),
+        var(--bg);
+    color:var(--text);
+    line-height:1.55;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button,input,textarea,select{font:inherit}
+
+.top-strip{
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding:0 22px;
+    background:#0a2838;
+    border-bottom:1px solid #3b4043;
+    color:#d9dddf;
+    font-size:13px;
+}
+.top-strip a{color:#fff}
+.top-strip a:hover{color:var(--gold)}
+
+.site-shell{
+    width:min(100%, var(--max));
+    margin:0 auto;
+}
+
+.header{
+    padding:18px 0 10px;
+    background:#071923;
+}
+.header-main{
+    display:grid;
+    grid-template-columns:280px 1fr 330px;
+    gap:24px;
+    align-items:center;
+    padding:0 18px 16px;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    min-height:80px;
+}
+.brand img{
+    width:100px;
+    height:72px;
+    object-fit:contain;
+    margin-right:12px;
+}
+.brand-fallback{
+    width:72px;
+    height:72px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,#0fc0ff,#006fa8);
+    color:#fff;
+    font-weight:900;
+    font-size:28px;
+    letter-spacing:-2px;
+}
+.brand-text strong{
+    display:block;
+    font-size:18px;
+    letter-spacing:.8px;
+    white-space:nowrap;
+}
+.brand-text span{
+    display:block;
+    color:#858d91;
+    font-size:11px;
+    margin-top:4px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.header-center{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:20px;
+    align-items:center;
+}
+.search-wrap{
+    display:flex;
+    max-width:520px;
+    width:100%;
+    margin:auto;
+}
+.search-wrap input{
+    flex:1;
+    min-width:0;
+    height:42px;
+    border:1px solid #4b5155;
+    background:#0c2a39;
+    color:#fff;
+    padding:0 14px;
+    outline:none;
+}
+.search-wrap input:focus{border-color:var(--accent)}
+.search-wrap button{
+    height:42px;
+    border:0;
+    padding:0 18px;
+    background:#15516b;
+    color:#fff;
+    cursor:pointer;
+    font-weight:700;
+}
+.search-wrap button:hover{background:#666d72}
+
+.socials{
+    display:flex;
+    gap:8px;
+}
+.socials a{
+    width:34px;height:34px;
+    display:grid;place-items:center;
+    border:1px solid #6b7378;
+    background:#0d2b3a;
+    font-size:14px;
+    font-weight:800;
+}
+.socials a:hover{background:var(--accent)}
+
+.contact-head{
+    text-align:right;
+}
+.contact-head strong{
+    color:#ff8ca0;
+    display:block;
+    font-size:14px;
+    margin-bottom:5px;
+}
+.contact-head a{
+    display:block;
+    color:#eee;
+    font-size:13px;
+    margin:2px 0;
+}
+
+.main-nav{
+    border-top:1px solid #262b2d;
+    border-bottom:1px solid #3c4246;
+    background:#081c29;
+}
+.nav-inner{
+    display:flex;
+    align-items:stretch;
+    padding:0 0;
+}
+.nav-link{
+    position:relative;
+    padding:16px 20px;
+    color:#e2e5e7;
+    font-size:14px;
+    border-right:1px solid #34393c;
+}
+.nav-link:hover,.nav-link.active{
+    background:#3c3f41;
+}
+.nav-link .caret{
+    font-size:10px;
+    margin-left:5px;
+    color:#cfd4d7;
+}
+.nav-link small{display:block;color:#92999d;font-size:10px;margin-top:1px}
+
+
+.hero-photo{
+    min-height:420px;
+    background:#0b2a3a;
+}
+.hero-main-photo{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+.hero-photo-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:linear-gradient(90deg,rgba(3,19,29,.84) 0%,rgba(3,30,44,.62) 46%,rgba(0,115,170,.18) 100%);
+}
+.hero-photo.no-photo{
+    background:
+      radial-gradient(circle at 75% 30%,rgba(83,199,255,.30),transparent 25%),
+      linear-gradient(135deg,#0a3347,#061722 65%,#043a57);
+}
+.hero-photo.no-photo .hero-photo-overlay{background:linear-gradient(90deg,rgba(3,20,30,.88),rgba(0,95,145,.25));}
+.hero-photo .hero-content{z-index:3}
+.hero-photo .hero-grid{z-index:2;opacity:.45}
+
+.hero-wrap{
+    padding:32px 0 0;
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:14px;
+}
+.sidebar{
+    padding-left:0;
+}
+.quick-title{
+    padding:12px 18px;
+    background:#0b3044;
+    border-left:4px solid var(--accent);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#fff;
+}
+.quick-link{
+    display:block;
+    position:relative;
+    padding:14px 18px 14px 20px;
+    margin-top:1px;
+    background:#124157;
+    border-left:4px solid transparent;
+    color:#e5e7e8;
+    font-size:14px;
+}
+.quick-link::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    border-top:19px solid transparent;
+    border-bottom:19px solid transparent;
+    border-left:10px solid var(--accent);
+}
+.quick-link:hover{
+    background:#18536d;
+    border-left-color:var(--accent);
+}
+
+.hero{
+    position:relative;
+    min-height:330px;
+    overflow:hidden;
+    border:1px solid #30373b;
+    background:
+        linear-gradient(110deg,rgba(0,168,255,.18),transparent 36%),
+        linear-gradient(160deg,#243238 0%,#141a1d 55%,#0e1011 100%);
+    box-shadow:var(--shadow);
+}
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(120deg,transparent 0 45%,rgba(255,255,255,.05) 45.1% 45.35%,transparent 45.45%),
+        repeating-linear-gradient(120deg,transparent 0 95px,rgba(255,255,255,.028) 96px 97px,transparent 98px 190px);
+    pointer-events:none;
+}
+.hero-grid{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+    background-size:34px 34px;
+    mask-image:linear-gradient(to right,rgba(0,0,0,.95),rgba(0,0,0,.2));
+}
+.hero-content{
+    position:relative;
+    z-index:2;
+    padding:52px 56px;
+    max-width:760px;
+}
+.kicker{
+    display:inline-block;
+    padding:6px 11px;
+    background:rgba(201,24,61,.92);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+.hero h1{
+    margin:0 0 13px;
+    font-size:clamp(34px,4vw,58px);
+    line-height:1.04;
+    letter-spacing:-1px;
+    text-transform:uppercase;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+    max-width:680px;
+    margin:0 0 25px;
+    color:#d0d5d7;
+    font-size:15px;
+}
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:44px;
+    padding:0 18px;
+    border:1px solid #666c70;
+    background:#24282b;
+    color:#fff;
+    cursor:pointer;
+    font-weight:800;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+.btn-primary{
+    background:linear-gradient(180deg,#16bfff,#0078b6);
+    border-color:#ff526f;
+}
+.btn-primary:hover{background:linear-gradient(180deg,#48ceff,#0096d2)}
+.btn-secondary:hover{background:#343a3f}
+
+.hero-tech{
+    position:absolute;
+    right:24px;
+    bottom:0;
+    width:min(36%,300px);
+    min-width:210px;
+    height:86%;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    opacity:.95;
+}
+.robot-car{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:2px solid rgba(255,182,50,.55);
+    background:
+        radial-gradient(circle at 50% 35%,rgba(255,255,255,.14),transparent 28%),
+        radial-gradient(circle at 50% 50%,#2d373c 0%,#151a1c 62%,#0f1213 100%);
+    box-shadow:0 0 0 12px rgba(255,182,50,.08),0 18px 50px rgba(0,0,0,.45);
+    display:grid;
+    place-items:center;
+}
+.robot-car::before{
+    content:"HTA";
+    color:#fff;
+    font-size:42px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+.robot-car::after{
+    content:"DIAGNOSTIC";
+    position:absolute;
+    transform:translateY(72px);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    color:#b9c0c4;
+}
+
+.section{
+    padding:40px 0 0;
+}
+.section-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:18px;
+}
+.section-head h2{
+    margin:0;
+    font-size:27px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+.section-head p{
+    margin:0;
+    color:var(--muted);
+    font-size:13px;
+    max-width:620px;
+    text-align:right;
+}
+.rule{
+    width:65px;
+    height:4px;
+    background:var(--accent);
+    margin-top:10px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+.service-card{
+    background:linear-gradient(180deg,#202527,#161a1d);
+    border:1px solid #30363a;
+    min-height:190px;
+    padding:22px;
+    position:relative;
+    overflow:hidden;
+}
+.service-card::after{
+    content:"";
+    position:absolute;
+    right:-34px;
+    top:-42px;
+    width:120px;
+    height:120px;
+    border:16px solid rgba(255,255,255,.04);
+    border-radius:50%;
+}
+.service-icon{
+    width:48px;height:48px;
+    display:grid;place-items:center;
+    background:#2b3034;
+    border:1px solid #495055;
+    margin-bottom:15px;
+    font-size:22px;
+}
+.service-card h3{
+    margin:0 0 7px;
+    font-size:17px;
+    text-transform:uppercase;
+}
+.service-card p{margin:0;color:#adb5b9;font-size:13px}
+.service-card a{
+    display:inline-block;
+    margin-top:14px;
+    color:#ff8fa3;
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+.service-card:hover{border-color:#5a6368;transform:translateY(-2px);transition:.2s}
+
+.feature-band{
+    margin-top:30px;
+    background:#0a2533;
+    border:1px solid #30363a;
+}
+.feature-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+.feature{
+    padding:19px;
+    border-right:1px solid #2d3236;
+}
+.feature:last-child{border-right:0}
+.feature strong{display:block;font-size:13px;text-transform:uppercase;margin-bottom:5px}
+.feature span{font-size:12px;color:#959da1}
+
+.content-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:14px;
+}
+.content-panel{
+    border:1px solid #30363a;
+    background:#0a2533;
+    padding:24px;
+}
+.content-panel h3{
+    margin:0 0 12px;
+    font-size:19px;
+    text-transform:uppercase;
+}
+.content-panel p,.content-panel li{color:#adb5b9;font-size:13px}
+.content-panel ul{padding-left:18px;margin-bottom:0}
+
+.tech-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:16px;
+}
+.tech-box{
+    padding:14px 15px;
+    background:#0d3041;
+    border-left:3px solid var(--accent);
+}
+.tech-box strong{display:block;font-size:12px;text-transform:uppercase}
+.tech-box span{display:block;color:#90999e;font-size:11px;margin-top:3px}
+
+.training-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+.training-card{
+    border:1px solid #30363a;
+    background:#0a2533;
+    padding:20px;
+}
+.training-card .tag{
+    display:inline-block;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    padding:5px 8px;
+    border:1px solid #4b5357;
+    color:#dce1e3;
+    margin-bottom:11px;
+}
+.training-card h3{font-size:16px;margin:0 0 7px}
+.training-card p{font-size:12px;color:#9ba4a8;margin:0}
+.training-card a{
+    display:inline-block;
+    margin-top:14px;
+    font-size:12px;
+    color:#ff8ea3;
+    font-weight:800;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+.gallery-item{
+    min-height:150px;
+    border:1px solid #30363a;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.08),transparent 38%),
+        linear-gradient(145deg,#323a3e,#171b1e);
+}
+.gallery-item:nth-child(2){background:linear-gradient(145deg,#333,#17191a)}
+.gallery-item:nth-child(3){background:linear-gradient(145deg,#2d3840,#121719)}
+.gallery-item:nth-child(4){background:linear-gradient(145deg,#3d3238,#171315)}
+.gallery-item:nth-child(5){background:linear-gradient(145deg,#30383c,#14181a)}
+.gallery-item:nth-child(6){background:linear-gradient(145deg,#3a3430,#171513)}
+.gallery-item:nth-child(7){background:linear-gradient(145deg,#31383e,#141719)}
+.gallery-item:nth-child(8){background:linear-gradient(145deg,#353137,#151317)}
+.gallery-item::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(transparent 65%,rgba(0,0,0,.7)),
+        repeating-linear-gradient(135deg,transparent 0 26px,rgba(255,255,255,.025) 27px 29px);
+}
+.gallery-label{
+    position:absolute;
+    left:12px;right:12px;bottom:10px;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+.contact-section{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:14px;
+}
+.contact-card,.map-card{
+    border:1px solid #30363a;
+    background:#0a2533;
+    padding:24px;
+}
+.info-row{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:10px;
+    padding:11px 0;
+    border-bottom:1px solid #292f32;
+}
+.info-row:last-child{border-bottom:0}
+.info-row strong{font-size:12px;text-transform:uppercase;color:#dce1e3}
+.info-row span,.info-row a{font-size:13px;color:#aeb7bb}
+.map-card{
+    min-height:300px;
+    background:
+        linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.32)),
+        repeating-linear-gradient(45deg,rgba(255,255,255,.03) 0 1px,transparent 1px 46px),
+        repeating-linear-gradient(-45deg,rgba(255,255,255,.025) 0 1px,transparent 1px 46px),
+        #1b2124;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.map-placeholder{
+    flex:1;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    color:#cfd4d6;
+}
+.map-pin{
+    width:52px;height:52px;
+    border-radius:50% 50% 50% 8%;
+    transform:rotate(-45deg);
+    background:var(--accent);
+    margin:0 auto 14px;
+    position:relative;
+}
+.map-pin::after{
+    content:"";
+    position:absolute;
+    width:18px;height:18px;
+    border-radius:50%;
+    background:#fff;
+    top:17px;left:17px;
+}
+.map-content{transform:none}
+.map-content h4{margin:0 0 4px;font-size:16px}
+.map-content p{margin:0;color:#9da5a9;font-size:12px}
+
+.footer{
+    margin-top:46px;
+    background:#071a25;
+    border-top:1px solid #34393c;
+}
+.footer-inner{
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:25px;
+    padding:32px 0;
+}
+.footer h4{margin:0 0 12px;text-transform:uppercase;font-size:13px}
+.footer p,.footer a{font-size:12px;color:#90989c}
+.footer a{display:block;margin:5px 0}
+.footer-bottom{
+    border-top:1px solid #292e31;
+    padding:14px 0;
+    text-align:center;
+    color:#70787c;
+    font-size:11px;
+}
+
+.ai-launcher{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:1000;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:2px solid #fff;
+    background:linear-gradient(145deg,#16bfff,#0078b6);
+    box-shadow:0 12px 32px rgba(0,0,0,.45);
+    cursor:pointer;
+    display:grid;
+    place-items:center;
+    color:#fff;
+}
+.ai-launcher .bot{
+    width:42px;height:42px;
+    border:3px solid #fff;
+    border-radius:12px;
+    position:relative;
+    background:#0c2737;
+}
+.ai-launcher .bot::before{
+    content:"••";
+    position:absolute;
+    left:10px;
+    top:2px;
+    font-size:25px;
+    letter-spacing:5px;
+}
+.ai-launcher .bot::after{
+    content:"";
+    position:absolute;
+    left:17px;
+    bottom:-10px;
+    width:9px;
+    height:9px;
+    border-left:3px solid #fff;
+    border-bottom:3px solid #fff;
+    transform:rotate(-45deg);
+    background:#0c2737;
+}
+.ai-online{
+    position:absolute;
+    right:3px;
+    top:4px;
+    width:15px;height:15px;
+    border-radius:50%;
+    background:#33d17a;
+    border:3px solid #111;
+}
+.ai-panel{
+    position:fixed;
+    right:22px;
+    bottom:103px;
+    width:min(380px,calc(100vw - 28px));
+    background:#0a2533;
+    border:1px solid #454c50;
+    box-shadow:0 22px 50px rgba(0,0,0,.55);
+    z-index:999;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+}
+.ai-panel.open{display:flex}
+.ai-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 16px;
+    background:linear-gradient(90deg,#07577d,#009cdb);
+}
+.ai-head strong{font-size:14px}
+.ai-head span{display:block;font-size:11px;color:#ffdbe3;margin-top:1px}
+.ai-close{
+    margin-left:auto;
+    border:0;
+    background:transparent;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+}
+.ai-greeting{
+    padding:14px 16px;
+    font-size:13px;
+    color:#d8dde0;
+    border-bottom:1px solid #2f3639;
+}
+.ai-greeting strong{color:#fff}
+.ai-body{
+    padding:12px 14px 14px;
+    max-height:360px;
+    overflow:auto;
+}
+.ai-question{
+    width:100%;
+    text-align:left;
+    background:#0f3345;
+    color:#e4e7e8;
+    border:1px solid #363d41;
+    padding:10px 11px;
+    margin:5px 0;
+    cursor:pointer;
+    font-size:12px;
+}
+.ai-question:hover{border-color:#6a7378;background:#292f33}
+.ai-answer{
+    margin:7px 0;
+    padding:10px 11px;
+    background:#0b2a3a;
+    border-left:3px solid var(--accent);
+    color:#bcc4c8;
+    font-size:12px;
+}
+.ai-foot{
+    padding:10px 12px;
+    border-top:1px solid #2f3538;
+    color:#7e878b;
+    font-size:10px;
+}
+
+.scroll-top{
+    position:fixed;
+    left:18px;
+    bottom:18px;
+    width:40px;height:40px;
+    border:1px solid #50585d;
+    background:#0c2a38;
+    color:#fff;
+    cursor:pointer;
+    opacity:0;
+    pointer-events:none;
+    transition:.2s;
+}
+.scroll-top.show{opacity:1;pointer-events:auto}
+
+@media(max-width:1000px){
+    .header-main{grid-template-columns:1fr;gap:14px}
+    .contact-head{text-align:left}
+    .header-center{grid-template-columns:1fr}
+    .search-wrap{margin:0}
+    .socials{display:none}
+    
+.hero-wrap{grid-template-columns:1fr}
+    .sidebar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+    .quick-title{grid-column:1/-1}
+    .quick-link{margin:0}
+    .quick-link::before{display:none}
+    .cards,.training-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery-grid{grid-template-columns:repeat(3,1fr)}
+    .feature-list{grid-template-columns:repeat(2,1fr)}
+    .feature:nth-child(2){border-right:0}
+    .feature:nth-child(-n+2){border-bottom:1px solid #2d3236}
+    .footer-inner{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:700px){
+    .top-strip{justify-content:center;height:38px;font-size:11px}
+    .header-main{padding:0 14px 12px}
+    .brand img,.brand-fallback{width:58px;height:58px}
+    .brand-text strong{font-size:15px}
+    .main-nav{overflow:auto}
+    .nav-inner{min-width:max-content}
+    .nav-link{padding:13px 14px;font-size:12px}
+    
+.hero-wrap{padding-top:18px}
+    .sidebar{grid-template-columns:1fr 1fr}
+    .hero{min-height:470px}
+    .hero-content{padding:34px 26px}
+    .hero h1{font-size:34px}
+    .hero-tech{
+        right:18px;
+        bottom:10px;
+        width:48%;
+        min-width:150px;
+        height:34%;
+    }
+    .robot-car{width:150px;height:150px}
+    .robot-car::before{font-size:30px}
+    .robot-car::after{transform:translateY(48px);font-size:8px}
+    .section{padding-top:28px}
+    .section-head{display:block}
+    .section-head p{text-align:left;margin-top:6px}
+    .cards,.training-grid,.content-grid,.contact-section,.footer-inner{grid-template-columns:1fr}
+    .feature-list{grid-template-columns:1fr 1fr}
+    .gallery-grid{grid-template-columns:1fr 1fr}
+    .info-row{grid-template-columns:95px 1fr}
+    .ai-launcher{right:14px;bottom:14px}
+    .ai-panel{right:14px;bottom:92px}
+    .scroll-top{left:12px;bottom:14px}
+}
+
+@media(max-width:420px){
+    .sidebar{grid-template-columns:1fr}
+    .feature-list{grid-template-columns:1fr}
+    .feature{border-right:0!important;border-bottom:1px solid #2d3236}
+    .gallery-grid{grid-template-columns:1fr}
+    .hero{min-height:520px}
+    .hero-tech{width:100%;right:0;bottom:0;height:29%;opacity:.72}
+    .hero-content{padding:28px 20px}
+    .hero h1{font-size:31px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-strip">
+    <div>
+        <a href="tel:+959941060666">09 941060666</a>
+        &nbsp; | &nbsp;
+        <a href="mailto:hightechauto@example.com">Contact High Tech Auto</a>
+    </div>
+</div>
+
+<header class="header">
+    <div class="site-shell">
+        <div class="header-main">
+            <a class="brand" href="#home" aria-label="High Tech Auto Car Service home">
+                <img src="11.png" alt="High Tech Auto logo"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+                <div class="brand-fallback" style="display:none;">HTA</div>
+                <div class="brand-text">
+                    <strong>HIGH TECH AUTO</strong>
+                    <span>Car Service • Diagnostic • Automotive Technology</span>
+                </div>
+            </a>
+
+            <div class="header-center">
+                <form class="search-wrap" onsubmit="siteSearch(event)">
+                    <input id="siteSearch" type="search" placeholder="Search Services & more..." aria-label="Search this website">
+                    <button type="submit">Search</button>
+                </form>
+                <div class="socials" aria-label="Social links">
+                    <a href="#" title="YouTube" aria-label="YouTube">YT</a>
+                    <a href="#" title="Facebook" aria-label="Facebook">f</a>
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
+                    <a href="#" title="X" aria-label="X">X</a>
+                </div>
+            </div>
+
+            <div class="contact-head">
+                <strong>PROFESSIONAL AUTOMOTIVE SERVICE</strong>
+                <a href="tel:+959941060666">📞 09 941060666</a>
+                <a href="#contact">📍 Yangon, Myanmar</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="site-shell">
+            <div class="nav-inner">
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#services">Services <span class="caret">▼</span></a>
+                <a class="nav-link" href="#diagnostic">Diagnostic <span class="caret">▼</span></a>
+                <a class="nav-link" href="#technology">Technology <span class="caret">▼</span></a>
+                <a class="nav-link" href="#training">Training <span class="caret">▼</span></a>
+                <a class="nav-link" href="#gallery">Gallery</a>
+                <a class="nav-link" href="#about">About Us</a>
+                <a class="nav-link" href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="home" class="site-shell">
+
+    <section class="hero-wrap">
+        <aside class="sidebar">
+            <div class="quick-title">Quick Links</div>
+            <a class="quick-link" href="#contact">Request a Service</a>
+            <a class="quick-link" href="#diagnostic">Computer Diagnostic</a>
+            <a class="quick-link" href="#services">Service List</a>
+            <a class="quick-link" href="#training">Training & Articles</a>
+            <a class="quick-link" href="#gallery">Workshop Gallery</a>
+            <a class="quick-link" href="tel:+959941060666">Call High Tech Auto</a>
+        </aside>
+
+        <div class="hero hero-photo">
+            <img class="hero-main-photo" src="main-photo.jpg" alt="High Tech Auto Car Service main workshop photo"
+                 onerror="this.style.display='none'; document.querySelector('.hero-photo').classList.add('no-photo');">
+            <div class="hero-photo-overlay"></div>
+            <div class="hero-grid"></div>
+
+            <div class="hero-content">
+                <div class="kicker">Automotive Technology & Service</div>
+                <h1>Advanced <span>Auto</span><br>Diagnostic Solutions</h1>
+                <p>
+                    Professional automotive diagnostics, electrical systems, ECU-related service,
+                    sensors, ADAS and mechanical support — with a technology-first approach.
+                </p>
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="#contact">Book a Service</a>
+                    <a class="btn btn-secondary" href="#diagnostic">Explore Diagnostics</a>
+                    <a class="btn btn-secondary" href="tel:+959941060666">Call Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="section-head">
+            <div>
+                <h2>Our Main Services</h2>
+                <div class="rule"></div>
+            </div>
+            <p>Built around diagnostics, electrical systems, modern vehicle electronics and practical workshop service.</p>
+        </div>
+
+        <div class="cards">
+            <article class="service-card">
+                <div class="service-icon">⌁</div>
+                <h3>Computer Diagnostic</h3>
+                <p>Scan DTCs, inspect live data, review system behavior and support fault-finding with professional diagnostic equipment.</p>
+                <a href="#diagnostic">View Diagnostic →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Auto Electrical</h3>
+                <p>Electrical fault finding, wiring checks, charging and starting systems, sensors, actuators and control circuits.</p>
+                <a href="#technology">Learn More →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">⚙</div>
+                <h3>Mechanical Service</h3>
+                <p>Engine, cooling, intake, fuel, transmission-related checks and general preventive maintenance support.</p>
+                <a href="#contact">Request Service →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">◈</div>
+                <h3>ECU & Programming</h3>
+                <p>Vehicle module diagnostics, communication checks and technology-focused support for modern electronically controlled systems.</p>
+                <a href="#technology">Explore Technology →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">◎</div>
+                <h3>ADAS & Sensors</h3>
+                <p>Introduction and troubleshooting support for radar, LiDAR concepts, ultrasonic sensors, cameras and vehicle safety systems.</p>
+                <a href="#training">Read Articles →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">❄</div>
+                <h3>Air Conditioning</h3>
+                <p>Basic inspection and service support for automotive A/C performance, electrical control and related components.</p>
+                <a href="#contact">Contact Us →</a>
+            </article>
+        </div>
+
+        <div class="feature-band">
+            <div class="feature-list">
+                <div class="feature">
+                    <strong>Diagnostic First</strong>
+                    <span>Measure → Analyze → Repair</span>
+                </div>
+                <div class="feature">
+                    <strong>Technology Focus</strong>
+                    <span>Electrical • Electronics • ECU</span>
+                </div>
+                <div class="feature">
+                    <strong>Practical Workshop</strong>
+                    <span>Real vehicles, real faults</span>
+                </div>
+                <div class="feature">
+                    <strong>Customer Support</strong>
+                    <span>Clear explanation before repair</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagnostic" class="section">
+        <div class="section-head">
+            <div>
+                <h2>Diagnostic & Technical Support</h2>
+                <div class="rule"></div>
+            </div>
+            <p>Use the assistant at the bottom-right for quick technical questions and general service guidance.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-panel">
+                <h3>Professional Diagnostic Workflow</h3>
+                <p>
+                    A good diagnostic process starts with the customer's symptom, followed by inspection,
+                    DTC analysis, live data review, testing and confirmation of the repair.
+                </p>
+                <ul>
+                    <li>Read and record DTCs before clearing them.</li>
+                    <li>Check freeze-frame and relevant live data.</li>
+                    <li>Compare sensor values with expected operating conditions.</li>
+                    <li>Test wiring, power, ground and communication circuits when required.</li>
+                    <li>Confirm the repair with a final scan and road test.</li>
+                </ul>
+            </div>
+
+            <div class="content-panel">
+                <h3>Typical Diagnostic Topics</h3>
+                <div class="tech-grid">
+                    <div class="tech-box"><strong>Check Engine</strong><span>MIL / DTC / live data</span></div>
+                    <div class="tech-box"><strong>ABS / Airbag</strong><span>Safety system diagnostics</span></div>
+                    <div class="tech-box"><strong>CVT / AT</strong><span>Transmission fault support</span></div>
+                    <div class="tech-box"><strong>Sensor Data</strong><span>MAF / MAP / O2 / VVT</span></div>
+                    <div class="tech-box"><strong>Network</strong><span>CAN communication concepts</span></div>
+                    <div class="tech-box"><strong>ECU</strong><span>Module communication support</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="section">
+        <div class="section-head">
+            <div>
+                <h2>Automotive Technology</h2>
+                <div class="rule"></div>
+            </div>
+            <p>High Tech Auto connects traditional workshop skills with modern electrical, electronic and diagnostic technology.</p>
+        </div>
+
+        <div class="cards">
+            <article class="service-card">
+                <div class="service-icon">▣</div>
+                <h3>Scan Tools & Live Data</h3>
+                <p>Vehicle communication, DTC interpretation, live-data observation and system-level troubleshooting.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Electrical & Electronics</h3>
+                <p>Voltage, continuity, resistance, power/ground checks, sensors, relays, actuators and control logic.</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">◉</div>
+                <h3>ADAS Concepts</h3>
+                <p>Radar, LiDAR, cameras and sensor-fusion concepts for modern driver-assistance systems.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-head">
+            <div>
+                <h2>About High Tech Auto</h2>
+                <div class="rule"></div>
+            </div>
+            <p>A modern workshop identity focused on accurate diagnosis, practical repair and automotive technology.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-panel">
+                <h3>More Than a Traditional Garage</h3>
+                <p>
+                    High Tech Auto Car Service is designed around a simple idea:
+                    diagnose the problem properly before replacing parts.
+                </p>
+                <p>
+                    The workshop combines mechanical service with automotive electrical,
+                    electronics, computer diagnostics and emerging vehicle technology.
+                </p>
+                <a class="btn btn-primary" href="#contact">Visit / Contact</a>
+            </div>
+
+            <div class="content-panel">
+                <h3>What We Value</h3>
+                <div class="tech-grid">
+                    <div class="tech-box"><strong>Accuracy</strong><span>Test before replacing</span></div>
+                    <div class="tech-box"><strong>Safety</strong><span>Respect vehicle systems</span></div>
+                    <div class="tech-box"><strong>Transparency</strong><span>Explain findings clearly</span></div>
+                    <div class="tech-box"><strong>Learning</strong><span>Keep improving with technology</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="training" class="section">
+        <div class="section-head">
+            <div>
+                <h2>Training & Technical Articles</h2>
+                <div class="rule"></div>
+            </div>
+            <p>Simple technical learning content for customers, technicians and the next generation of automotive professionals.</p>
+        </div>
+
+        <div class="training-grid">
+            <article class="training-card">
+                <span class="tag">Diagnostic</span>
+                <h3>What does a Check Engine light mean?</h3>
+                <p>Understand the difference between a warning light, a stored code and an actual root cause.</p>
+                <a href="#assistant">Ask the AI Assistant →</a>
+            </article>
+            <article class="training-card">
+                <span class="tag">Sensors</span>
+                <h3>Radar vs LiDAR in modern vehicles</h3>
+                <p>Learn the basic operating concepts and why different sensors are used together.</p>
+                <a href="#assistant">Ask the AI Assistant →</a>
+            </article>
+            <article class="training-card">
+                <span class="tag">Electrical</span>
+                <h3>Using a multimeter for vehicle diagnosis</h3>
+                <p>Start with voltage, resistance, continuity, power and ground checks before deeper testing.</p>
+                <a href="#assistant">Ask the AI Assistant →</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="section-head">
+            <div>
+                <h2>Workshop Gallery</h2>
+                <div class="rule"></div>
+            </div>
+            <p>Replace these demo panels with your actual workshop, scanner, engine and customer-service photos.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item"><div class="gallery-label">Diagnostic Scanner</div></div>
+            <div class="gallery-item"><div class="gallery-label">Engine Service</div></div>
+            <div class="gallery-item"><div class="gallery-label">Auto Electrical</div></div>
+            <div class="gallery-item"><div class="gallery-label">Workshop Bay</div></div>
+            <div class="gallery-item"><div class="gallery-label">Sensors & Testing</div></div>
+            <div class="gallery-item"><div class="gallery-label">ECU Diagnostics</div></div>
+            <div class="gallery-item"><div class="gallery-label">ADAS Technology</div></div>
+            <div class="gallery-item"><div class="gallery-label">High Tech Auto Team</div></div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-head">
+            <div>
+                <h2>Contact High Tech Auto</h2>
+                <div class="rule"></div>
+            </div>
+            <p>Call the workshop or open the location directly in Google Maps.</p>
+        </div>
+
+        <div class="contact-section">
+            <div class="contact-card">
+                <div class="info-row">
+                    <strong>Address</strong>
+                    <a href="https://maps.app.goo.gl/3QGaiew1XwrCedoB7B" target="_blank" rel="noopener">
+                        No. A-40, Taw Win Residence, Taw Win Street, U Wisara Road,
+                        (41) Block (Extend), Dagon (North)
+                    </a>
+                </div>
+                <div class="info-row">
+                    <strong>Phone</strong>
+                    <a href="tel:+959941060666">09 941060666</a>
+                </div>
+                <div class="info-row">
+                    <strong>Service</strong>
+                    <span>Diagnostic • Electrical • Mechanical • Automotive Technology</span>
+                </div>
+                <div class="info-row">
+                    <strong>Maps</strong>
+                    <a href="https://maps.app.goo.gl/3QGaiew1XwrCedoB7B" target="_blank" rel="noopener">Open High Tech Auto on Google Maps →</a>
+                </div>
+
+                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+                    <a class="btn btn-primary" href="tel:+959941060666">Call Now</a>
+                    <a class="btn btn-secondary" href="https://maps.app.goo.gl/3QGaiew1XwrCedoB7B" target="_blank" rel="noopener">Open Google Maps</a>
+                </div>
+            </div>
+
+            <div class="map-card">
+                <div class="map-placeholder">
+                    <div>
+                        <div class="map-pin"></div>
+                        <div class="map-content">
+                            <h4>High Tech Auto Car Service</h4>
+                            <p>Dagon (North), Yangon, Myanmar</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-primary" href="https://maps.app.goo.gl/3QGaiew1XwrCedoB7B" target="_blank" rel="noopener">
+                    Open Location in Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="site-shell">
+        <div class="footer-inner">
+            <div>
+                <h4>High Tech Auto Car Service</h4>
+                <p>Professional automotive diagnostics, electrical, electronics and mechanical service.</p>
+                <p>Designed for a modern technology-focused workshop identity.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="#services">Services</a>
+                <a href="#diagnostic">Diagnostic</a>
+                <a href="#technology">Technology</a>
+                <a href="#training">Training</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <a href="tel:+959941060666">09 941060666</a>
+                <a href="https://maps.app.goo.gl/3QGaiew1XwrCedoB7B" target="_blank" rel="noopener">Google Maps</a>
+                <a href="#home">Back to Home ↑</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © <span id="year"></span> High Tech Auto Car Service. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" type="button" aria-label="Scroll to top">↑</button>
+
+<!-- AI Assistant -->
+<div id="assistant" class="ai-panel" aria-label="High Tech Auto Assistant">
+    <div class="ai-head">
+        <div class="bot" style="width:34px;height:34px;flex:none"></div>
+        <div>
+            <strong>High Tech Auto Assistant</strong>
+            <span>Online • General automotive guidance</span>
+        </div>
+        <button class="ai-close" type="button" onclick="toggleAssistant()">×</button>
+    </div>
+    <div class="ai-greeting">
+        Hi, I’m your <strong>High Tech Auto Assistant</strong>.<br>
+        Choose a question below:
+    </div>
+    <div class="ai-body">
+        <button class="ai-question" onclick="askAssistant('P0171')">What does P0171 mean?</button>
+        <button class="ai-question" onclick="askAssistant('Check Engine')">My Check Engine light is on. What should I do?</button>
+        <button class="ai-question" onclick="askAssistant('Toyota Vitz')">Toyota Vitz diagnostic information</button>
+        <button class="ai-question" onclick="askAssistant('Computer Diagnostic')">What is Computer Diagnostic?</button>
+        <button class="ai-question" onclick="askAssistant('Location')">Where is High Tech Auto?</button>
+        <button class="ai-question" onclick="askAssistant('Phone')">How can I contact the workshop?</button>
+        <button class="ai-question" onclick="askAssistant('Radar vs LiDAR')">Radar vs LiDAR — what is the difference?</button>
+        <div id="aiAnswer"></div>
+    </div>
+    <div class="ai-foot">
+        This assistant provides general information and does not replace professional vehicle inspection.
+    </div>
+</div>
+
+<button class="ai-launcher" type="button" onclick="toggleAssistant()" aria-label="Open High Tech Auto Assistant">
+    <div class="bot"></div>
+    <span class="ai-online"></span>
+</button>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function toggleAssistant(){
+    const panel = document.getElementById("assistant");
+    panel.classList.toggle("open");
+}
+
+function askAssistant(topic){
+    const answer = document.getElementById("aiAnswer");
+    const responses = {
+        "P0171": "<strong>P0171</strong> generally means the engine is running too lean (System Too Lean, Bank 1). Common diagnostic areas include intake/vacuum leaks, MAF/air-measurement problems, fuel delivery and exhaust leaks. A proper diagnosis should check live data and fuel trims before replacing parts.",
+        "Check Engine": "A Check Engine light means the vehicle computer detected a fault. Avoid guessing from the light alone. Scan for DTCs, record freeze-frame data, inspect relevant live data and then test the suspected circuit or component.",
+        "Toyota Vitz": "For a Toyota Vitz, the best starting point is the exact model year, engine and the customer's symptom. A scan can then identify stored/pending codes and allow live-data checks.",
+        "Computer Diagnostic": "Computer diagnostic uses a scan tool to communicate with vehicle control modules, read DTCs, inspect live data and sometimes perform active tests or relearn procedures.",
+        "Location": "High Tech Auto Car Service is at No. A-40, Taw Win Residence, Taw Win Street, U Wisara Road, (41) Block (Extend), Dagon (North). Tap <a href='https://maps.app.goo.gl/3QGaiew1XwrCedoB7B' target='_blank' rel='noopener'>Google Maps</a> to open the location.",
+        "Phone": "High Tech Auto Car Service: <a href='tel:+959941060666'>09 941060666</a>.",
+        "Radar vs LiDAR": "Radar uses radio waves and is strong for detecting range and relative motion, especially in poor visibility. LiDAR uses laser light to build detailed depth information. Modern ADAS can combine radar, cameras and other sensors."
+    };
+    answer.innerHTML = '<div class="ai-answer">' + (responses[topic] || "Please call High Tech Auto for a detailed vehicle inspection.") + '</div>';
+}
+
+function siteSearch(event){
+    event.preventDefault();
+    const q = document.getElementById("siteSearch").value.trim().toLowerCase();
+    if(!q) return;
+    const targets = [
+        {keys:["service","repair","garage"], id:"services"},
+        {keys:["diagnostic","scan","dtc","check engine"], id:"diagnostic"},
+        {keys:["technology","ecu","adas","radar","lidar"], id:"technology"},
+        {keys:["training","article","learn"], id:"training"},
+        {keys:["gallery","photo","workshop"], id:"gallery"},
+        {keys:["contact","phone","address","location","map"], id:"contact"}
+    ];
+    const target = targets.find(t => t.keys.some(k => q.includes(k)));
+    if(target){
+        document.getElementById(target.id).scrollIntoView({behavior:"smooth"});
+    }else{
+        alert("Try: Services, Diagnostic, ECU, ADAS, Training, Gallery, Contact, Location or Phone.");
+    }
+}
+
+const scrollTop = document.getElementById("scrollTop");
+window.addEventListener("scroll", function(){
+    scrollTop.classList.toggle("show", window.scrollY > 420);
+});
+scrollTop.addEventListener("click", function(){
+    window.scrollTo({top:0, behavior:"smooth"});
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+    link.addEventListener("click", function(){
+        const panel = document.getElementById("assistant");
+        if(this.getAttribute("href") === "#assistant") panel.classList.add("open");
+    });
+});
+</script>
+
+</body>
+</html>
